@@ -1,22 +1,62 @@
 
 const updateTitle = () => {
     let title = document.getElementById("title").value;
-    document.getElementById("ShowHeading").innerHTML = `<div class="w-full"><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl font-bold antialiased">${title}</h1>`;
 }
 
 const updateTitleLeft = () => {
     let title = document.getElementById("title").value;
-    document.getElementById("ShowHeading").innerHTML = `<div class="w-full text-left"><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl font-bold antialiased">${title}</h1>`;
+    let ShowHeading = document.getElementById("ShowHeading");
+    
+    ShowHeading.classList.remove('text-center');
+    ShowHeading.classList.remove('text-right');
+    ShowHeading.classList.add('text-left');
 }
 
 const updateTitleCenter = () => {
     let title = document.getElementById("title").value;
-    document.getElementById("ShowHeading").innerHTML = `<div class="w-full text-center "><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl font-bold antialiased">${title}</h1>`;
+    let ShowHeading = document.getElementById("ShowHeading");
+    ShowHeading.classList.remove('text-left');
+    ShowHeading.classList.remove('text-right');
+    ShowHeading.classList.add('text-center');
 }
 
 const updateTitleRight= () => {
     let title = document.getElementById("title").value;
-    document.getElementById("ShowHeading").innerHTML = `<div class="w-full text-right "><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl font-bold antialiased">${title}</h1>`;
+    let ShowHeading = document.getElementById("ShowHeading");
+    ShowHeading.classList.remove('text-left');
+    ShowHeading.classList.remove('text-center');
+    ShowHeading.classList.add('text-right');
+}
+
+const updateTitleBlue = () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl text-blue-600 font-bold antialiased">${title}</h1>`;
+    let ShowHeading = document.getElementById("ShowHeading");
+    ShowHeading.classList.remove('text-black');
+    ShowHeading.classList.remove('text-green-600');
+    ShowHeading.classList.add('text-blue-600');
+}
+
+const updateTitleBlack = () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl font-bold antialiased">${title}</h1>`;
+    let ShowHeading = document.getElementById("ShowHeading");
+    ShowHeading.classList.remove('text-blue-600');
+    ShowHeading.classList.remove('text-green-600');
+    ShowHeading.classList.add('text-black');
+}
+
+const updateTitleGreen= () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<h1 class="text-5xl font-bold antialiased">${title}</h1>`;
+    let ShowHeading = document.getElementById("ShowHeading");
+    ShowHeading.classList.remove('text-black');
+    ShowHeading.classList.remove('text-blue-600');
+    ShowHeading.classList.add('text-green-600');
 }
 
 
