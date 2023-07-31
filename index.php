@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -32,14 +33,15 @@
         </div>
         <div class="w-full mt-5 p-4">
           <div class="w-full">
-            <input type="text" id="first_name"
+            <input type="text" id="title"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-              placeholder="Heading">
+              onKeyUp="updateTitle()" placeholder="Heading">
           </div>
           <div class="w-full mt-3 flex justify-between items-center">
             <div class="inline-flex rounded-md shadow-sm" role="group">
               <button
-                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 ">
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
+                onClick="updateTitleLeft()">
                 <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                   viewBox="0 0 20 20">
                   <path
@@ -48,7 +50,8 @@
                 Left
               </button>
               <button
-                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 ">
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
+                onClick="updateTitleCenter()">
                 <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                   viewBox="0 0 20 20">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -57,7 +60,8 @@
                 Center
               </button>
               <button
-                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 ">
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
+                onClick="updateTitleRight()">
                 <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                   viewBox="0 0 20 20">
                   <path
@@ -116,7 +120,8 @@
         </div>
 
         <div class="w-full mt-5 p-4 flex justify-center items-center">
-          <div class="w-full h-60 flex justify-center items-center dropper border-2 rounded border-dashed border-gray-300">
+          <div
+            class="w-full h-60 flex justify-center items-center dropper border-2 rounded border-dashed border-gray-300">
             <label class="w-full text-center cursor-pointer">
               <div class="w-full flex justify-center">
                 <svg width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,11 +166,11 @@
         </svg>
         <span class="text-gray-800 font-normal text-lg">Preview</span>
       </div>
-      
+
       <div class="w-full mt-5 p-4">
-        <div class="w-full" id="Heading"></div>
-        <div class="w-full" id="image"></div>
-        <div class="w-full" id="Description"></div>
+        <div class="w-full" id="ShowHeading"></div>
+        <div class="w-full" id="ShowImage"></div>
+        <div class="w-full" id="ShowDescription"></div>
       </div>
     </div>
   </div>

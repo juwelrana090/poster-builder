@@ -1,4 +1,25 @@
 
+const updateTitle = () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<div class="w-full"><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+}
+
+const updateTitleLeft = () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<div class="w-full text-left"><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+}
+
+const updateTitleCenter = () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<div class="w-full text-center "><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+}
+
+const updateTitleRight= () => {
+    let title = document.getElementById("title").value;
+    document.getElementById("ShowHeading").innerHTML = `<div class="w-full text-right "><h1 class="text-5xl font-bold antialiased">${title}</h1></div>`;
+}
+
+
 var $dropper = document.querySelector('.dropper');
 
 $dropper.ondragover = function (e) {
@@ -27,7 +48,6 @@ $dropper.ondrop = function (e) {
 
     } else {
         alert("Invalid File, Allow SVG, PNG, JPG or GIF");
-        // console.log("Invalid File");
     }
 };
 
