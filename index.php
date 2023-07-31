@@ -153,10 +153,18 @@
             </svg>
           </span>
         </div>
+        <div class="w-full mt-5 p-4">
+          <div class="w-full">
+            <textarea id="description" rows="4"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              onKeyUp="updateDescription()"
+              placeholder="Write your description here..."></textarea>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="w-full h-[90vh] p-4 mt-4 rounded border-2 border-gray-200 "
+    <div class="w-full h-[90vh] p-4 mt-4 rounded border-2 border-gray-200 bg-gray-100 "
       style="border-top-style: dotted; border-bottom-style: dotted">
       <div class="w-full h-10 -mt-[30px] flex items-center justify-center bg-white rounded text-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -170,15 +178,23 @@
         <span class="text-gray-800 font-normal text-lg">Preview</span>
       </div>
 
-      <div class="w-full mt-5 p-4">
+      <div class="w-full mt-5 p-4 bg-gray-100" id="download">
         <div class="w-full mb-4" id="ShowHeading"></div>
         <div class="w-full mb-4 flex justify-center items-center" id="ShowImage"></div>
         <div class="w-full mb-4" id="ShowDescription"></div>
+      </div>
+
+      <div class="w-full mt-5 p-4">
+        <button
+          class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
+          onclick="downloadDiv()"
+          >Download</button>
       </div>
     </div>
   </div>
   </div>
 </body>
+<script src="js/htmltoimage.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
 </html>
