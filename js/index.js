@@ -60,6 +60,21 @@ const updateTitleGreen= () => {
 }
 
 
+function getBase64(file) {
+    var reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = async function () {
+        // console.log('getBase64', reader.result)
+        document.getElementById("ShowImage").innerHTML = `<img src="${reader.result}" style="width: 800px;"/>`;
+    }
+
+    reader.onerror = function (error) {
+      console.log('Error: ', error)
+    }
+  }
+
+
+
 var $dropper = document.querySelector('.dropper');
 
 $dropper.ondragover = function (e) {
@@ -78,14 +93,14 @@ $dropper.ondrop = function (e) {
     e.preventDefault();
     this.classList.remove('border-gray-600');
     this.classList.add('border-gray-300');
-    var files = e.dataTransfer.files;
+    var file = e.dataTransfer.files[0];
 
-    console.log("files", files)
+    console.log("file", file)
 
-    const type = files[0].type;
+    const type = file.type;
 
     if (type == "image/jpg" || type == "image/jpeg" || type == "image/gif" || type == "image/png") {
-
+        getBase64(file)
     } else {
         alert("Invalid File, Allow SVG, PNG, JPG or GIF");
     }
@@ -94,10 +109,11 @@ $dropper.ondrop = function (e) {
 
 const ImageUpload = () => {
     // console.log(event.target.files[0].type)
-    const type = event.target.files[0].type;
-
+    var file = event.target.files[0];
+    const type = file.type;
+    
     if (type == "image/jpg" || type == "image/jpeg" || type == "image/gif" || type == "image/png") {
-
+        getBase64(file)
     } else {
         alert("Invalid File, Allow SVG, PNG, JPG or GIF");
         // console.log("Invalid File");

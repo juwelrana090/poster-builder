@@ -171,9 +171,9 @@
       </div>
 
       <div class="w-full mt-5 p-4">
-        <div class="w-full" id="ShowHeading"></div>
-        <div class="w-full" id="ShowImage"></div>
-        <div class="w-full" id="ShowDescription"></div>
+        <div class="w-full mb-4" id="ShowHeading"></div>
+        <div class="w-full mb-4 flex justify-center items-center" id="ShowImage"></div>
+        <div class="w-full mb-4" id="ShowDescription"></div>
       </div>
     </div>
   </div>
