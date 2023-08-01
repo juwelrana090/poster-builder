@@ -20,10 +20,10 @@
         <span class="text-gray-800 font-normal text-lg">Components</span>
       </div>
 
-      <div class="w-full mt-5 rounded border-2">
+      <div class="w-full hidden mt-5 rounded border-2" id="SetHeading">
         <div class="w-full h-10 -mt-[20px] px-1 flex justify-between items-center">
           <span class="px-3 rounded-full bg-gray-200 text-gray-800 font-normal text-base">Heading</span>
-          <span class="p-1 rounded-full bg-white">
+          <span class="p-1 rounded-full bg-white cursor-pointer " onClick="HeadingHiddenHandle()">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#e00" class="text-red"
               viewBox="0 0 16 16">
               <path
@@ -110,10 +110,10 @@
         </div>
       </div>
 
-      <div class="w-full mt-5 rounded border-2">
+      <div class="w-full hidden mt-5 rounded border-2" id="SetImage">
         <div class="w-full h-10 -mt-[20px] px-1 flex justify-between items-center">
           <span class="px-3 rounded-full bg-gray-200 text-gray-800 font-normal text-base">Image</span>
-          <span class="p-1 rounded-full bg-white">
+          <span class="p-1 rounded-full bg-white cursor-pointer " onClick="ImageHiddenHandle()">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#e00" class="text-red"
               viewBox="0 0 16 16">
               <path
@@ -142,10 +142,10 @@
         </div>
       </div>
 
-      <div class="w-full mt-5 rounded border-2">
+      <div class="w-full hidden mt-5 rounded border-2" id="SetDescription">
         <div class="w-full h-10 -mt-[20px] px-1 flex justify-between items-center">
           <span class="px-3 rounded-full bg-gray-200 text-gray-800 font-normal text-base">Description</span>
-          <span class="p-1 rounded-full bg-white">
+          <span class="p-1 rounded-full bg-white cursor-pointer " onClick="DscHiddenHandle()">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#e00" class="text-red"
               viewBox="0 0 16 16">
               <path
@@ -157,9 +157,34 @@
           <div class="w-full">
             <textarea id="description" rows="4"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              onKeyUp="updateDescription()"
-              placeholder="Write your description here..."></textarea>
+              onKeyUp="updateDescription()" placeholder="Write your description here..."></textarea>
           </div>
+        </div>
+      </div>
+
+      <div class="w-full mt-5" id="ItemsSelect">
+        <div class="w-full text-center">
+          <h2 class="text-3xl font-bold antialiased">Items</h2>
+        </div>
+        <div class="w-full mt-2 flex gap-2 justify-center items-center">
+          <button
+            class="w-full text-white text-2xl font-bold antialiased bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+            id="headingButton"
+            onclick="HeadingShowHandle()">
+            Heading
+          </button>
+          <button
+            class="w-full text-gray-900 text-2xl font-bold antialiased bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+            id="imageButton"
+            onclick="ImageShowHandle()">
+            Image
+          </button>
+          <button
+            class="w-full text-gray-900 text-2xl font-bold antialiased bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+            id="dscButton"
+            onclick="DscShowHandle()">
+            Description
+          </button>
         </div>
       </div>
     </div>
@@ -187,8 +212,7 @@
       <div class="w-full mt-5 p-4">
         <button
           class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-          onclick="downloadDiv()"
-          >Download</button>
+          onclick="downloadDiv()">Download</button>
       </div>
     </div>
   </div>

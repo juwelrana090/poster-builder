@@ -1,3 +1,136 @@
+localStorage.setItem("length", Number(0));
+
+const HeadingShowHandle = () => {
+    const heading = document.getElementById("SetHeading");
+    heading.classList.remove('hidden');
+    heading.classList.add('block');
+
+    const headingButton = document.getElementById("headingButton");
+    headingButton.classList.add('hidden');
+
+    let length = Number(localStorage.getItem("length"));
+    localStorage.setItem("length", Number(length + 1));
+    let newLength = Number(localStorage.getItem("length"));
+    if(newLength == 2){
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.add('hidden');
+    }else{
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.remove('hidden');
+        ItemsSelect.classList.add('block');
+    }
+}
+
+const HeadingHiddenHandle = () => {
+    const heading = document.getElementById("SetHeading");
+    heading.classList.remove('block');
+    heading.classList.add('hidden');
+
+    const headingButton = document.getElementById("headingButton");
+    headingButton.classList.remove('hidden');
+    headingButton.classList.add('block');
+
+    let length = Number(localStorage.getItem("length"));
+    localStorage.setItem("length", Number(length - 1));
+    let newLength = Number(localStorage.getItem("length"));
+    if(newLength == 2){
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.add('hidden');
+    }else{
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.remove('hidden');
+        ItemsSelect.classList.add('block');
+    }
+}
+
+const ImageShowHandle = () => {
+    const image = document.getElementById("SetImage");
+    image.classList.remove('hidden');
+    image.classList.add('block');
+
+    const imageButton = document.getElementById("imageButton");
+    imageButton.classList.add('hidden');
+    
+    let length = Number(localStorage.getItem("length"));
+    localStorage.setItem("length", Number(length + 1));
+    let newLength = Number(localStorage.getItem("length"));
+
+    if(newLength == 2){
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.add('hidden');
+    }else{
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.remove('hidden');
+        ItemsSelect.classList.add('block');
+    }
+}
+const ImageHiddenHandle = () => {
+    const image = document.getElementById("SetImage");
+    image.classList.remove('block');
+    image.classList.add('hidden');
+
+    const imageButton = document.getElementById("imageButton");
+    imageButton.classList.remove('hidden');
+    imageButton.classList.add('block');
+    
+    let length = Number(localStorage.getItem("length"));
+    localStorage.setItem("length", Number(length - 1));
+    let newLength = Number(localStorage.getItem("length"));
+
+    if(newLength == 2){
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.add('hidden');
+    }else{
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.remove('hidden');
+        ItemsSelect.classList.add('block');
+    }
+}
+const DscShowHandle = () => {
+    const description = document.getElementById("SetDescription");
+    description.classList.remove('hidden');
+    description.classList.add('block');
+
+    const dscButton = document.getElementById("dscButton");
+    dscButton.classList.add('hidden');
+
+    let length = Number(localStorage.getItem("length"));
+    localStorage.setItem("length", Number(length + 1));
+    let newLength = Number(localStorage.getItem("length"));
+
+    if(newLength == 2){
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.add('hidden');
+    }else{
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.remove('hidden');
+        ItemsSelect.classList.add('block');
+    }
+
+}
+const DscHiddenHandle = () => {
+    const description = document.getElementById("SetDescription");
+    description.classList.remove('block');
+    description.classList.add('hidden');
+
+    const dscButton = document.getElementById("dscButton");
+    dscButton.classList.remove('hidden');
+    dscButton.classList.add('block');
+
+    let length = Number(localStorage.getItem("length"));
+    localStorage.setItem("length", Number(length - 1));
+    let newLength = Number(localStorage.getItem("length"));
+    if(newLength == 2){
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.add('hidden');
+    }else{
+        const ItemsSelect = document.getElementById("ItemsSelect");
+        ItemsSelect.classList.remove('hidden');
+        ItemsSelect.classList.add('block');
+    }
+}
+
+
 
 const updateTitle = () => {
     let title = document.getElementById("title").value;
